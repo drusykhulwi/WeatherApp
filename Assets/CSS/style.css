@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+a {
+  text-decoration: none;
+  color: blue;
+}
+.meteo-app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f7fe;
+}
+.meteo-app .container {
+  width: 50%;
+  height: 80%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+  border-radius: 15px;
+}
+.meteo-app .container header {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #f9f7fe;
+  padding: 30px 0;
+}
+.meteo-app .container header form {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.meteo-app .container header form .search-bar {
+  width: 420px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #f9f7fe;
+  border: 2px solid #f9f7fe;
+  margin-right: 30px;
+  font-size: 16px;
+  padding: 15px 20px;
+}
+.meteo-app .container header form .search-button {
+  width: 120px;
+  height: 40px;
+  background-color: blue;
+  border: 2px solid blue;
+  border-radius: 5px;
+  color: #fff;
+}
+.meteo-app .container main {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+.meteo-app .container main .weather-main {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.meteo-app .container main .weather-main h1 {
+  line-height: 48px;
+  font-size: 38px;
+  font-weight: normal;
+  color: blue;
+}
+.meteo-app .container main .weather-main p {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  color: rgba(39, 33, 66, 0.4);
+}
+.meteo-app .container main .weather-main p span {
+  color: #f65282;
+}
+.meteo-app .container main .weather-temp {
+  width: 25%;
+  height: 50%;
+  display: flex;
+  align-items: right;
+}
+.meteo-app .container main .weather-temp .temp-value {
+  font-size: 88px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+.meteo-app .container main .weather-temp .temp-icon{
+  font-size: 44px;
+  margin-top: 22px;
+}
+.meteo-app .container main .weather-temp .degrees{
+  margin-top: 16px;
+  font-size: 28px;
+}
+.meteo-app .container footer {
+  width: 100%;
+  height: auto;
+  padding: 30px 0 0 0;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+  border-top: 1px solid #f9f7fe;
+}
