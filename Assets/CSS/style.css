@@ -60,52 +60,96 @@ a {
   border-radius: 5px;
   color: #fff;
 }
-.meteo-app .container main {
+.meteo-app .container .weather {
   width: auto;
   height: auto;
   display: flex;
   justify-content: space-evenly;
 }
-.meteo-app .container main .weather-main {
+.meteo-app .container .weather .weather-main {
   width: 50%;
   height: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-.meteo-app .container main .weather-main h1 {
+.meteo-app .container .weather .weather-main h1 {
   line-height: 48px;
   font-size: 38px;
   font-weight: normal;
   color: blue;
 }
-.meteo-app .container main .weather-main p {
+.meteo-app .container .weather .weather-main p {
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
   color: rgba(39, 33, 66, 0.4);
 }
-.meteo-app .container main .weather-main p span {
+.meteo-app .container .weather .weather-main p span {
   color: #f65282;
 }
-.meteo-app .container main .weather-temp {
+.meteo-app .container .weather .weather-temp {
   display: flex;
   align-items: right;
 }
-.meteo-app .container main .weather-temp .temp-value {
+.meteo-app .container .weather .weather-temp .temp-value {
   font-size: 88px;
   font-weight: bold;
   margin-left: 10px;
   line-height: 88px;
 }
-.meteo-app .container main .weather-temp .temp-icon {
+.meteo-app .container .weather .weather-temp .temp-icon {
   width: 88px;
   height: 88px;
 }
-.meteo-app .container main .weather-temp .degrees {
+.meteo-app .container .weather .weather-temp .degrees {
   margin-top: 6px;
   font-size: 28px;
 }
+.meteo-app .container main .weather-forcast {
+  display: flex;
+  margin-top: 20px;
+}
+.meteo-app .container main .weather-forecast .weather-forecast-content {
+  display: flex;
+  margin-left: 40px;
+  text-align: center;
+  /*justify-content: space-around;*/
+}
+.meteo-app
+  .container
+  main
+  .weather-forecast
+  .weather-forecast-content
+  .weather-forecast-days {
+  display: flex;
+  flex-direction: column;
+}
+.meteo-app
+  .container
+  main
+  .weather-forecast
+  .weather-forecast-content
+  .weather-forecast-days .day{
+    font-size: 16px;
+    color: #bababa;
+  }
+  .meteo-app
+  .container
+  main
+  .weather-forecast
+  .weather-forecast-content
+  .weather-forecast-days .weather-forecast-temperature{
+    font-size: 13px;
+  }
+    .meteo-app
+  .container
+  main
+  .weather-forecast
+  .weather-forecast-content
+  .weather-forecast-days .weather-forecast-temperature .temperature-min{
+    color: #bababa;
+  }
 .meteo-app .container footer {
   width: 100%;
   height: auto;
