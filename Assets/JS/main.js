@@ -43,6 +43,32 @@ function searchCity(city) {
   axios.get(apiUrl).then(updateWeather);
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Tue", "Wed", "Thur", "Fri", "Sat"];
+  let forecastHTML = "";
+
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+  <div class="weather-forecast-days">
+    <div class="day">${day}</div>
+    <img
+      src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"
+      alt=""
+      width="36"
+    />
+    <div class="weather-forecast-temperature">
+      <span class="temperature-max">18°</span>
+      <span class="temperature-min">12°</span>
+    </div>
+  </div>
+  `;
+  });
+  forecastElement.innerHTML = forecastHTML;
+}
 function handleSearch(event) {
   event.preventDefault();
   let searchBarElement = document.querySelector("#search-bar");
@@ -53,3 +79,4 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearch);
 
 searchCity("Miami");
+displayForecast();

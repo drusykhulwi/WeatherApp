@@ -106,50 +106,39 @@ a {
   margin-top: 6px;
   font-size: 28px;
 }
-.meteo-app .container main .weather-forcast {
+.meteo-app .container main .weather-forecast {
   display: flex;
   margin-top: 20px;
-}
-.meteo-app .container main .weather-forecast .weather-forecast-content {
-  display: flex;
-  margin-left: 40px;
   text-align: center;
-  /*justify-content: space-around;*/
+  justify-content: space-around;
 }
-.meteo-app
-  .container
-  main
-  .weather-forecast
-  .weather-forecast-content
-  .weather-forecast-days {
+.meteo-app .container main .weather-forecast .weather-forecast-days {
   display: flex;
   flex-direction: column;
 }
+.meteo-app .container main .weather-forecast .weather-forecast-days .day {
+  font-size: 16px;
+  color: #bababa;
+}
 .meteo-app
   .container
   main
   .weather-forecast
-  .weather-forecast-content
-  .weather-forecast-days .day{
-    font-size: 16px;
-    color: #bababa;
-  }
-  .meteo-app
+  .weather-forecast-days
+  .weather-forecast-temperature {
+  font-size: 16px;
+  color: #f65282;
+  font-weight: bold;
+}
+.meteo-app
   .container
   main
   .weather-forecast
-  .weather-forecast-content
-  .weather-forecast-days .weather-forecast-temperature{
-    font-size: 13px;
-  }
-    .meteo-app
-  .container
-  main
-  .weather-forecast
-  .weather-forecast-content
-  .weather-forecast-days .weather-forecast-temperature .temperature-min{
-    color: #bababa;
-  }
+  .weather-forecast-days
+  .weather-forecast-temperature
+  .temperature-min {
+  opacity: 0.6;
+}
 .meteo-app .container footer {
   width: 100%;
   height: auto;
