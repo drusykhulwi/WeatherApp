@@ -39,6 +39,12 @@ function formatDate(date) {
 
   return `${day} ${hours}:${minutes}`;
 }
+function formatDay(timestamp){
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue","Wed", "Thur", "Fri", "Sat"];
+
+  return days[date.getDay()];
+}
 
 function searchCity(city) {
   let apiKey = "a39to9848ebf1032a3bb6a0b1f2641cd";
@@ -55,26 +61,34 @@ function displayForecast(response) {
   console.log(response.data)
   let forecastElement = document.querySelector("#forecast");
 
-  let days = ["Tue", "Wed", "Thur", "Fri", "Sat"];
+  
   let forecastHTML = "";
 
-  days.forEach(function (day) {
+  response.data.daily.forEach(function (day, index) {
+
+    if (index < 5){
     forecastHTML =
       forecastHTML +
       `
   <div class="weather-forecast-days">
-    <div class="day">${day}</div>
+    <div class="day">${formatDay(day.time)}</div>
     <img
-      src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"
+      src="${day.condition.icon_url}"
       alt=""
-      width="36"
+      width="88"
+      height="88"
     />
     <div class="weather-forecast-temperature">
-      <span class="temperature-max">18°</span>
-      <span class="temperature-min">12°</span>
+      <span class="temperature-max">${Math.round(
+        day.temperature.maximum
+      )}°</span>
+      <span class="temperature-min">${Math.round(
+        day.temperature.minimum
+      )}°</span>
     </div>
   </div>
   `;
+  }
   });
   forecastElement.innerHTML = forecastHTML;
 }
