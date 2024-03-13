@@ -25,6 +25,7 @@ a {
   justify-content: space-evenly;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
   border-radius: 15px;
+  margin: 20px;
 }
 .meteo-app .container header {
  /* width: auto;
